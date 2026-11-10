@@ -1,0 +1,220 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f6fa;
+    color: #172033;
+}
+
+header {
+    background-color: #1e293b;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+    padding: 20px 5%;
+}
+
+/* parte da logo e menus */
+
+.carrinho {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.carrinho img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+nav {
+    justify-self: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+.logo {
+    justify-self: end;
+}
+
+.logo h1 {
+    font-size: 28px;
+}
+/* main */
+main {
+    padding: 30px 5%;
+}
+
+.apresentacao {
+    text-align: center;
+    margin: 25px 0 35px;
+}
+
+.apresentacao h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.apresentacao p {
+    font-size: 19px;
+    color: #64748b;
+}
+
+.filtros {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.campo-busca,
+.campo-categoria {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-busca {
+    flex: 1;
+}
+
+.filtros label {
+    font-weight: bold;
+}
+
+.filtros input,
+.filtros select {
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+}
+/*catalogo, já adicionei algumas coisas pensando no javascript */
+.catalogo {
+    margin-bottom: 45px;
+}
+
+.catalogo h2 {
+    margin-bottom: 20px;
+}
+
+/* Área onde os produtos serão inseridos pelo JavaScript */
+.lista-produtos {
+    display: grid;
+
+    /* Cria colunas automaticamente */
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+/* Card de cada instrumento */
+.produto {
+    background-color: white;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+
+    padding: 20px;
+    text-align: center;
+
+    /* Organiza os elementos verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Imagem do instrumento */
+.produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+/* Nome do instrumento */
+.produto h3 {
+    font-size: 21px;
+}
+
+/* Categoria */
+.produto .categoria {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Preço */
+.produto p {
+    color: #1556b0;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/* Descrição */
+.produto .descricao {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Botões dos produtos */
+.produto button {
+    width: 100%;
+    padding: 12px;
+
+    background-color: #1556b0;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Estilo para o botão de favorito */
+.produto .favorito {
+    background-color: #e2e8f0;
+    color: #172033;
+}
+
+/* Favorito ativado */
+.produto .favorito.ativo {
+    background-color: #facc15;
+    color: #172033;
+}
+
+/*sobre a loja e rodapé*/
+
+.sobre {
+    text-align: center;
+    padding: 35px 5%;
+    background-color: #e8edf5;
+}
+
+.sobre h2 {
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #1e293b;
+    color: white;
+
+    text-align: center;
+    padding: 22px;
+}

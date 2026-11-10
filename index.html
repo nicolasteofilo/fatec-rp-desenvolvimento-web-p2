@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicalStore - Catálogo de Instrumentos</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1> Loja de musica </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+        <div class="carrinho"> <!-- carrinho -->
+            <img src="Imagens/Iconsmind-Outline-Full-Cart.512.png" alt="Carrinho de compras">
+            <span id="quantidade-carrinho">0</span>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <Section class="apresentacao">
+            <h2> Catálogo de instrumentos musicais </h2> <!-- titulo principal da pagina -->
+            <p> Encontre o instrumento musical perfeito para você </p>
+        </Section>
+
+        <section class="filtros"> <!-- formas de busca -->
+            <div class="campo-busca">
+                <label for="campo-pesquisa">Pesquisar instrumento:</label>
+                <input type="text" placeholder="Buscar instrumento..." id="campo pesquisa">
+            </div>
+            <div class="campo-categoria">
+                <label for="filtro-categoria">Categoria:</label>
+
+                <select id="filtro-categoria">
+                    <option value="Todas">Todas</option>
+                    <option value="Cordas">Cordas</option>
+                    <option value="Teclas">Teclas</option>
+                    <option value="Percussão">Percussão</option>
+                </select>
+            </div>
+        </section>
+
+
+        <!-- catalogo -->
+         <section id="catalogo" class="catalogo">
+
+            <h2>Nossos Instrumentos</h2>
+
+            <!-- Os cards serão inseridos aqui pelo JavaScript -->
+            <div id="lista-produtos" class="lista-produtos">
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- sobre a loja -->
+    <section class="sobre">
+        <h2> Sobre a loja de música </h2>
+        <p>
+        A MusicalStore é uma loja especializada em instrumentos
+        musicais, oferecendo opções para músicos de todos os níveis.
+        </p>
+    </section>
+
+    <!--  RODAPÉ -->
+    <footer>
+        <p>MusicalStore © 2026 - Todos os direitos reservados.</p>
+    </footer>
+
+</body>

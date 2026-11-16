@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicalStore - Catálogo de Instrumentos</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <h1> Loja de musica </h1>
-        </div>
+        <h1>Loja de música</h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Início</a></li>
@@ -21,64 +19,95 @@
                 <li><a href="#sobre">Sobre</a></li>
             </ul>
         </nav>
-        <div class="carrinho"> <!-- carrinho -->
-            <img src="Imagens/Iconsmind-Outline-Full-Cart.512.png" alt="Carrinho de compras">
-            <span id="quantidade-carrinho">0</span>
-        </div>
+        <button type="button" id="botao-tema">Alternar tema</button>
     </header>
 
-
-
-
     <main>
-        <Section class="apresentacao">
-            <h2> Catálogo de instrumentos musicais </h2> <!-- titulo principal da pagina -->
-            <p> Encontre o instrumento musical perfeito para você </p>
-        </Section>
+        <section id="inicio" class="apresentacao">
+            <h2>Catálogo de instrumentos musicais</h2>
+            <p>Encontre o instrumento musical perfeito para você</p>
+        </section>
 
-        <section class="filtros"> <!-- formas de busca -->
-            <div class="campo-busca">
+        <section class="filtros">
+            <div class="campo">
                 <label for="campo-pesquisa">Pesquisar instrumento:</label>
-                <input type="text" placeholder="Buscar instrumento..." id="campo pesquisa">
+                <input type="text" placeholder="Buscar instrumento..." id="campo-pesquisa">
             </div>
-            <div class="campo-categoria">
+            <div class="campo">
                 <label for="filtro-categoria">Categoria:</label>
-
                 <select id="filtro-categoria">
                     <option value="Todas">Todas</option>
                     <option value="Cordas">Cordas</option>
                     <option value="Teclas">Teclas</option>
                     <option value="Percussão">Percussão</option>
+                    <option value="Sopro">Sopro</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="ordenacao">Ordenar por:</label>
+                <select id="ordenacao">
+                    <option value="nenhuma">Padrão</option>
+                    <option value="nome">Nome</option>
+                    <option value="preco">Preço</option>
                 </select>
             </div>
         </section>
 
-
-        <!-- catalogo -->
-         <section id="catalogo" class="catalogo">
-
-            <h2>Nossos Instrumentos</h2>
-
-            <!-- Os cards serão inseridos aqui pelo JavaScript -->
-            <div id="lista-produtos" class="lista-produtos">
-
-            </div>
-
+        <section id="painel" class="painel">
+            <div>Total exibido: <strong id="painel-total">—</strong></div>
+            <div>Disponíveis: <strong id="painel-disponiveis">—</strong></div>
+            <div>Preço médio: <strong id="painel-media">—</strong></div>
+            <div>Mais caro: <strong id="painel-maior">—</strong></div>
         </section>
 
+        <section id="catalogo" class="catalogo">
+            <h2>Nossos instrumentos</h2>
+            <div id="lista-produtos" class="lista-produtos"></div>
+        </section>
+
+        <section class="cadastro">
+            <h2>Cadastrar instrumento</h2>
+            <form id="form-cadastro" novalidate>
+                <div class="campo">
+                    <label for="campo-nome">Nome:</label>
+                    <input type="text" id="campo-nome">
+                </div>
+                <div class="campo">
+                    <label for="campo-preco">Preço (R$):</label>
+                    <input type="text" id="campo-preco" inputmode="decimal">
+                </div>
+                <div class="campo">
+                    <label for="campo-categoria">Categoria:</label>
+                    <select id="campo-categoria">
+                        <option value="">Selecione</option>
+                        <option value="Cordas">Cordas</option>
+                        <option value="Teclas">Teclas</option>
+                        <option value="Percussão">Percussão</option>
+                        <option value="Sopro">Sopro</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="campo-descricao">Descrição:</label>
+                    <input type="text" id="campo-descricao">
+                    <p id="contador-descricao">0 caracteres</p>
+                </div>
+                <button type="submit">Cadastrar</button>
+                <p id="mensagem-form" class="mensagem"></p>
+            </form>
+        </section>
     </main>
-    <!-- sobre a loja -->
-    <section class="sobre">
-        <h2> Sobre a loja de música </h2>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre a loja de música</h2>
         <p>
-        A MusicalStore é uma loja especializada em instrumentos
-        musicais, oferecendo opções para músicos de todos os níveis.
+            A MusicalStore é uma loja especializada em instrumentos
+            musicais, oferecendo opções para músicos de todos os níveis.
         </p>
     </section>
 
-    <!--  RODAPÉ -->
     <footer>
         <p>MusicalStore © 2026 - Todos os direitos reservados.</p>
     </footer>
-
 </body>
+
+</html>
